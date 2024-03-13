@@ -26,27 +26,27 @@ class _LoginPrisonerState extends State<LoginPrisoner> {
     _password.dispose();
   }
 
-  void loginUser() async {
-    setState(() {
-      _isLoading = true;
-    });
-    String res = await AuthMethods()
-        .loginUser(email: _emailaddress.text, password: _password.text);
-    if (res == 'success') {
-      Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => Prisoner()),
-          (route) => false);
+  // void loginUser() async {
+  //   setState(() {
+  //     _isLoading = true;
+  //   });
+  //   String res = await AuthMethods()
+  //       .loginUser(email: _emailaddress.text, password: _password.text);
+  //   if (res == 'success') {
+  //     Navigator.of(context).pushAndRemoveUntil(
+  //         MaterialPageRoute(builder: (context) => Prisoner()),
+  //         (route) => false);
 
-      setState(() {
-        _isLoading = false;
-      });
-    } else {
-      setState(() {
-        _isLoading = false;
-      });
-      showSnackBar(context, res);
-    }
-  }
+  //     setState(() {
+  //       _isLoading = false;
+  //     });
+  //   } else {
+  //     setState(() {
+  //       _isLoading = false;
+  //     });
+  //     showSnackBar(context, res);
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {

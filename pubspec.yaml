@@ -40,6 +40,11 @@ dependencies:
   # firebase_core:
   # firebase_storage:
   font_awesome_flutter: 10.2.1
+  firebase_core:
+  firebase_auth: 
+  cloud_firestore:
+  http: 
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:

@@ -11,7 +11,7 @@ class Prisoner extends StatefulWidget {
 }
 
 class _PrisonerState extends State<Prisoner> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -58,15 +58,15 @@ class _PrisonerState extends State<Prisoner> {
   Widget _getBody(int index) {
     switch (index) {
       case 0:
-        return const Rehabilitation();
+        return const Rehabulutation_Page();
       case 1:
-        return const MyChats();
+        return const Chat_Section();
       case 2:
-        return const PrisonerProfile();
+        return const DashboardPage();
       case 3:
-        return const directory();
+        return const Legal_Directory();
       case 4:
-        return const articles();
+        return Artiles_page();
       default:
         return Container(); // Return an empty container for unknown index
     }
@@ -76,41 +76,5 @@ class _PrisonerState extends State<Prisoner> {
     setState(() {
       _selectedIndex = index;
     });
-  }
-}
-
-class RehabilitationProgram extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Rehabilitation Program'),
-    );
-  }
-}
-
-class Chats extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Chats'),
-    );
-  }
-}
-
-class LegalDirectory extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Legal Directory'),
-    );
-  }
-}
-
-class LegalArticles extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Legal Articles'),
-    );
   }
 }

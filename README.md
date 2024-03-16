@@ -40,3 +40,12 @@ Before running the application, ensure you have the following requirements insta
    ```
 
 2. Navigate to the project directory:
+   `cd legal-matrix`
+
+3. Install depenedencies:
+   `flutter pub get`
+
+4. Run the application:
+   `flutter run`
+
+**Ensure you have a connected device (emulator or physical device) or use the appropriate flags to run on a specific platform.**

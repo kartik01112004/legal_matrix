@@ -6,7 +6,7 @@ class Lawyer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Lawyer')),
+      appBar: AppBar(title: const Text('Lawyer')),
     );
   }
 }

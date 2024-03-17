@@ -14,13 +14,13 @@ class Artiles_page extends GetView<ApiControler> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Obx(() => controller.isLoading.value
-          ? Center(child: const CircularProgressIndicator())
+          ? const Center(child: CircularProgressIndicator())
           : SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(20),
+                  const Padding(
+                    padding: EdgeInsets.all(20),
                     child: Row(
                       children: [
                         Icon(Icons.library_books_sharp,
@@ -35,7 +35,7 @@ class Artiles_page extends GetView<ApiControler> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 8, right: 8),
-                    child: Container(
+                    child: SizedBox(
                       height: h * 0.71,
                       child: ListView.builder(
                         itemCount: controller.sections.length,
@@ -55,7 +55,7 @@ class Artiles_page extends GetView<ApiControler> {
                                   color: Colors.grey.withOpacity(0.5),
                                   spreadRadius: 4,
                                   blurRadius: 0.3,
-                                  offset: Offset(0, 3),
+                                  offset: const Offset(0, 3),
                                 ),
                               ],
                             ),
@@ -66,11 +66,11 @@ class Artiles_page extends GetView<ApiControler> {
                                 children: [
                                   Text(
                                     "$article",
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500),
                                   ),
-                                  Text(
+                                  const Text(
                                     "30 Dec 2018 , 12:34",
                                     style: TextStyle(
                                         fontSize: 11,
@@ -81,7 +81,7 @@ class Artiles_page extends GetView<ApiControler> {
                               ),
                               subtitle: Text(
                                 '$sectionModel',
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w400,
                                   color: Color(0xFF8B949E),

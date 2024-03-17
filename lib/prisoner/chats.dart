@@ -9,13 +9,13 @@ class Chat_Section extends StatelessWidget {
     var w = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Color(0xFFEBEBEB),
+      backgroundColor: const Color(0xFFEBEBEB),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 40),
+            const Padding(
+              padding: EdgeInsets.only(left: 40),
               child: Row(
                 children: [
                   Icon(Icons.library_books_sharp,
@@ -30,19 +30,19 @@ class Chat_Section extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 3.5, right: 2),
-              child: Container(
+              child: SizedBox(
                 height: h * 0.71,
                 child: Container(
                   height: h * 0.71,
                   width: w * 0.9,
-                  margin: EdgeInsets.all(20),
-                  decoration: BoxDecoration(
+                  margin: const EdgeInsets.all(20),
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                   child: ListView.builder(
                     itemBuilder: (context, index) {
                       return Container(
-                          padding: EdgeInsets.all(8),
+                          padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             border: Border.symmetric(
@@ -53,12 +53,12 @@ class Chat_Section extends StatelessWidget {
                                 color: Colors.grey.withOpacity(0.5),
                                 spreadRadius: 4,
                                 blurRadius: 0.3,
-                                offset: Offset(0, 3),
+                                offset: const Offset(0, 3),
                               ),
                             ],
                           ),
                           child: ListTile(
-                            title: Row(
+                            title: const Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Row(
@@ -89,7 +89,7 @@ class Chat_Section extends StatelessWidget {
                                 SizedBox(
                                   width: w * 0.05,
                                 ),
-                                Text("Your idea for this application is nice! ",
+                                const Text("Your idea for this application is nice! ",
                                     style: TextStyle(
                                         fontSize: 13,
                                         fontWeight: FontWeight.w400,
@@ -105,7 +105,7 @@ class Chat_Section extends StatelessWidget {
             ),
             Container(
               height: 20,
-              color: Color(0xFFEBEBEB),
+              color: const Color(0xFFEBEBEB),
             )
           ],
         ),

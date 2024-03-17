@@ -374,11 +374,11 @@ class _SIGNUPPAGEState extends State<SIGNUPPAGE> {
 
                       FirebaseAuth.instance.createUserWithEmailAndPassword(email: emailaddress.value.text, password: password.value.text).then((value) =>
                       { FirebaseFirestore.instance.collection("Lawyer").doc(FirebaseAuth.instance.currentUser!.uid).set({
-                      "Name" : firstname.text.toString() + " " + lastname.text.toString(),
+                      "Name" : "${firstname.text} ${lastname.text}",
                       "Email" : emailaddress.text.toString(),
                       "PhoneNumber" : phonenumber.text.toString()
                       })}).then((value) => {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> LOGINPAGE()))
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const LOGINPAGE()))
                       });
                       const SnackBar(
                         content: Text(

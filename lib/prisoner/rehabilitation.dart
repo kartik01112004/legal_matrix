@@ -8,34 +8,34 @@ class Rehabulutation_Page extends StatelessWidget {
     var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Color(0xFFEBEBEB),
+      backgroundColor: const Color(0xFFEBEBEB),
       body: SingleChildScrollView(
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(topLeft: Radius.circular(20))),
-          padding: EdgeInsets.only(left: 20, top: 10, bottom: 20, right: 20),
+          padding: const EdgeInsets.only(left: 20, top: 10, bottom: 20, right: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "Rehabilitation program",
                 style: TextStyle(
                     color: Color(0xFF282727),
                     fontWeight: FontWeight.w400,
                     fontSize: 24),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 "Knowledge base",
                 style: TextStyle(
                     color: Color(0xFF2E3A59),
                     fontWeight: FontWeight.w600,
                     fontSize: 21),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -44,11 +44,11 @@ class Rehabulutation_Page extends StatelessWidget {
                   Container(
                     height: h * 0.1,
                     width: w * 0.4,
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Color(0xFF3366FF).withOpacity(0.5),
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
-                    child: Row(
+                        color: const Color(0xFF3366FF).withOpacity(0.5),
+                        borderRadius: const BorderRadius.all(Radius.circular(10))),
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -67,11 +67,11 @@ class Rehabulutation_Page extends StatelessWidget {
                   Container(
                     height: h * 0.1,
                     width: w * 0.4,
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Color(0xFFFF333F).withOpacity(0.5),
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
-                    child: Row(
+                        color: const Color(0xFFFF333F).withOpacity(0.5),
+                        borderRadius: const BorderRadius.all(Radius.circular(10))),
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -89,7 +89,7 @@ class Rehabulutation_Page extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -98,11 +98,11 @@ class Rehabulutation_Page extends StatelessWidget {
                   Container(
                     height: h * 0.1,
                     width: w * 0.4,
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Color(0xFFFF9533).withOpacity(0.5),
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
-                    child: Row(
+                        color: const Color(0xFFFF9533).withOpacity(0.5),
+                        borderRadius: const BorderRadius.all(Radius.circular(10))),
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -121,11 +121,11 @@ class Rehabulutation_Page extends StatelessWidget {
                   Container(
                     height: h * 0.1,
                     width: w * 0.4,
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Color(0xFF39DE54).withOpacity(0.5),
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
-                    child: Row(
+                        color: const Color(0xFF39DE54).withOpacity(0.5),
+                        borderRadius: const BorderRadius.all(Radius.circular(10))),
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -143,7 +143,7 @@ class Rehabulutation_Page extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -152,9 +152,9 @@ class Rehabulutation_Page extends StatelessWidget {
                   Container(
                     height: h * 0.25,
                     width: w * 0.42,
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Color(0xFFF0F0F0),
+                      color: const Color(0xFFF0F0F0),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Column(
@@ -168,18 +168,18 @@ class Rehabulutation_Page extends StatelessWidget {
                                 height: 45,
                                 width: 45,
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFFFB978),
+                                  color: const Color(0xFFFFB978),
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 child:
-                                Icon(Icons.headphones, color: Colors.white),
+                                const Icon(Icons.headphones, color: Colors.white),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.menu,
                                 size: 22,
                               )
                             ]),
-                        Text(
+                        const Text(
                           "15%",
                           style: TextStyle(
                             color: Color(0xFF2E3A59),
@@ -187,7 +187,7 @@ class Rehabulutation_Page extends StatelessWidget {
                             fontSize: 15,
                           ),
                         ),
-                        Text(
+                        const Text(
                           "Podcasts",
                           style: TextStyle(
                             color: Color(0xFF2E3A59),
@@ -195,7 +195,7 @@ class Rehabulutation_Page extends StatelessWidget {
                             fontSize: 13,
                           ),
                         ),
-                        Text(
+                        const Text(
                           "Speak 20 minutes.",
                           style: TextStyle(
                             color: Color(0xFF2E3A59),
@@ -209,9 +209,9 @@ class Rehabulutation_Page extends StatelessWidget {
                   Container(
                     height: h * 0.25,
                     width: w * 0.42,
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Color(0xFFF0F0F0),
+                      color: const Color(0xFFF0F0F0),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Column(
@@ -225,18 +225,18 @@ class Rehabulutation_Page extends StatelessWidget {
                                 height: 45,
                                 width: 45,
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFF86060),
+                                  color: const Color(0xFFF86060),
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                child: Icon(Icons.note_alt_rounded,
+                                child: const Icon(Icons.note_alt_rounded,
                                     color: Colors.white),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.menu,
                                 size: 22,
                               )
                             ]),
-                        Text(
+                        const Text(
                           "32%",
                           style: TextStyle(
                             color: Color(0xFF2E3A59),
@@ -244,7 +244,7 @@ class Rehabulutation_Page extends StatelessWidget {
                             fontSize: 15,
                           ),
                         ),
-                        Text(
+                        const Text(
                           "Quiz",
                           style: TextStyle(
                             color: Color(0xFF2E3A59),
@@ -252,7 +252,7 @@ class Rehabulutation_Page extends StatelessWidget {
                             fontSize: 13,
                           ),
                         ),
-                        Text(
+                        const Text(
                           "Learn 5 new rules",
                           style: TextStyle(
                             color: Color(0xFF2E3A59),
@@ -265,7 +265,7 @@ class Rehabulutation_Page extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -274,9 +274,9 @@ class Rehabulutation_Page extends StatelessWidget {
                   Container(
                     height: h * 0.25,
                     width: w * 0.42,
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Color(0xFFF0F0F0),
+                      color: const Color(0xFFF0F0F0),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Column(
@@ -290,17 +290,17 @@ class Rehabulutation_Page extends StatelessWidget {
                                 height: 45,
                                 width: 45,
                                 decoration: BoxDecoration(
-                                  color: Color(0xFF778DFF),
+                                  color: const Color(0xFF778DFF),
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                child: Icon(Icons.mic, color: Colors.white),
+                                child: const Icon(Icons.mic, color: Colors.white),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.menu,
                                 size: 22,
                               )
                             ]),
-                        Text(
+                        const Text(
                           "21%",
                           style: TextStyle(
                             color: Color(0xFF2E3A59),
@@ -308,7 +308,7 @@ class Rehabulutation_Page extends StatelessWidget {
                             fontSize: 15,
                           ),
                         ),
-                        Text(
+                        const Text(
                           "Prounancation",
                           style: TextStyle(
                             color: Color(0xFF2E3A59),
@@ -316,7 +316,7 @@ class Rehabulutation_Page extends StatelessWidget {
                             fontSize: 13,
                           ),
                         ),
-                        Text(
+                        const Text(
                           "Read 30 minutes.",
                           style: TextStyle(
                             color: Color(0xFF2E3A59),
@@ -330,9 +330,9 @@ class Rehabulutation_Page extends StatelessWidget {
                   Container(
                     height: h * 0.25,
                     width: w * 0.42,
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Color(0xFFF0F0F0),
+                      color: const Color(0xFFF0F0F0),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Column(
@@ -346,18 +346,18 @@ class Rehabulutation_Page extends StatelessWidget {
                                 height: 45,
                                 width: 45,
                                 decoration: BoxDecoration(
-                                  color: Color(0xFF64E562),
+                                  color: const Color(0xFF64E562),
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                child: Icon(Icons.co_present_rounded,
+                                child: const Icon(Icons.co_present_rounded,
                                     color: Colors.white),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.menu,
                                 size: 22,
                               )
                             ]),
-                        Text(
+                        const Text(
                           "64%",
                           style: TextStyle(
                             color: Color(0xFF2E3A59),
@@ -365,7 +365,7 @@ class Rehabulutation_Page extends StatelessWidget {
                             fontSize: 15,
                           ),
                         ),
-                        Text(
+                        const Text(
                           "Dictionary",
                           style: TextStyle(
                             color: Color(0xFF2E3A59),
@@ -373,7 +373,7 @@ class Rehabulutation_Page extends StatelessWidget {
                             fontSize: 13,
                           ),
                         ),
-                        Text(
+                        const Text(
                           "Learn 5 new words",
                           style: TextStyle(
                             color: Color(0xFF2E3A59),

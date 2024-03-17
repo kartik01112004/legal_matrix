@@ -6,6 +6,8 @@ import 'package:legal_matrix/prisoner/directory.dart';
 import 'package:legal_matrix/prisoner/rehabilitation.dart';
 
 class Prisoner extends StatefulWidget {
+  const Prisoner({super.key});
+
   @override
   _PrisonerState createState() => _PrisonerState();
 }
@@ -64,9 +66,9 @@ class _PrisonerState extends State<Prisoner> {
       case 2:
         return const DashboardPage();
       case 3:
-        return const Legal_Directory();
+        return const LegalDirectory();
       case 4:
-        return Artiles_page();
+        return const Artiles_page();
       default:
         return Container(); // Return an empty container for unknown index
     }

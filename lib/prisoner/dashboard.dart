@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/Calander.dart';
@@ -12,7 +14,8 @@ class DashboardPage extends StatelessWidget {
     var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: const Color(0xFFEBEBEB),
+      
+      backgroundColor: Color(0xFFEBEBEB),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -20,7 +23,7 @@ class DashboardPage extends StatelessWidget {
               height: 330,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(30)),
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 left: 20,
                 top: 10,
               ),
@@ -29,7 +32,7 @@ class DashboardPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      const CircleAvatar(
+                      CircleAvatar(
                         foregroundImage:
                         AssetImage("assets/associated_photo-1.png"),
                         maxRadius: 50,
@@ -38,12 +41,12 @@ class DashboardPage extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
-                            "Ame Admin",
+                          Text(
+                            FirebaseAuth.instance.currentUser?.displayName ?? "",
                             style: TextStyle(
                                 fontWeight: FontWeight.w700, fontSize: 17),
                           ),
-                          const Text(
+                          Text(
                             "User",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400, fontSize: 13),
@@ -60,12 +63,12 @@ class DashboardPage extends StatelessWidget {
                               children: <Widget>[
                                 Container(
                                   width: w * 0.2,
-                                  padding: const EdgeInsets.all(10),
-                                  decoration: const BoxDecoration(
+                                  padding: EdgeInsets.all(10),
+                                  decoration: BoxDecoration(
                                       color: Colors.deepPurple,
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(10))),
-                                  child: const Column(
+                                  child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
@@ -89,13 +92,13 @@ class DashboardPage extends StatelessWidget {
                                   width: w * 0.01,
                                 ),
                                 Container(
-                                  padding: const EdgeInsets.all(10),
+                                  padding: EdgeInsets.all(10),
                                   width: w * 0.2,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                       color: Colors.deepPurple,
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(10))),
-                                  child: const Row(mainAxisAlignment: MainAxisAlignment.center,
+                                  child: Row(mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
                                       Icon(Icons.account_balance,
@@ -131,7 +134,7 @@ class DashboardPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 20,
                   ),
                   SizedBox(
@@ -142,20 +145,20 @@ class DashboardPage extends StatelessWidget {
                       children: <Widget>[
                         Container(
                           width: w * 0.43,
-                          padding: const EdgeInsets.all(10),
+                          padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: const BorderRadius.all(Radius.circular(10)),
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
                             boxShadow: [
-                              const BoxShadow(color: Colors.white),
+                              BoxShadow(color: Colors.white),
                               BoxShadow(
                                   color: Colors.grey.withOpacity(0.2),
                                   blurRadius: 7,
                                   spreadRadius: 2,
-                                  offset: const Offset(0, 3)),
+                                  offset: Offset(0, 3)),
                             ],
                           ),
-                          child: const Column(
+                          child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -181,7 +184,7 @@ class DashboardPage extends StatelessWidget {
                                     fontSize: 13),
                               ),
                               Text(
-                                "Email : \n sp546816@gmail.com",
+                                "Email : \n ${FirebaseAuth.instance.currentUser!.email}",
                                 style: TextStyle(
                                     color: Color(0xFF535353),
                                     fontWeight: FontWeight.w400,
@@ -190,25 +193,25 @@ class DashboardPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 5,
                         ),
                         Container(
-                          padding: const EdgeInsets.all(10),
+                          padding: EdgeInsets.all(10),
                           width: w * 0.435,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: const BorderRadius.all(Radius.circular(10)),
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
                             boxShadow: [
-                              const BoxShadow(color: Colors.white),
+                              BoxShadow(color: Colors.white),
                               BoxShadow(
                                   color: Colors.grey.withOpacity(0.2),
                                   blurRadius: 7,
                                   spreadRadius: 2,
-                                  offset: const Offset(0, 3)),
+                                  offset: Offset(0, 3)),
                             ],
                           ),
-                          child: const Row(
+                          child: Row(
                             children: [
                               Column(
                                 mainAxisAlignment:
@@ -291,27 +294,27 @@ class DashboardPage extends StatelessWidget {
               ),
             ),
             Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               width: w,
-              margin: const EdgeInsets.all(20),
-              padding: const EdgeInsets.all(20),
+              margin: EdgeInsets.all(20),
+              padding: EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text("Analytics"),
+                  Text("Analytics"),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
                         height: h * 0.35,
                         width: w * 0.4,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(
                                     "assets/Screenshot 2023-09-15 232219.png"))),
-                        child: const Column(
+                        child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -335,17 +338,17 @@ class DashboardPage extends StatelessWidget {
                       Container(
                         height: 194,
                         width: w * 0.3,
-                        padding: const EdgeInsets.all(20),
+                        padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: const BorderRadius.all(Radius.circular(10)),
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
                           boxShadow: [
-                            const BoxShadow(color: Colors.white),
+                            BoxShadow(color: Colors.white),
                             BoxShadow(
                                 color: Colors.grey.withOpacity(0.2),
                                 blurRadius: 7,
                                 spreadRadius: 2,
-                                offset: const Offset(0, 3)),
+                                offset: Offset(0, 3)),
                           ],
                         ),
                         child: Column(
@@ -361,11 +364,11 @@ class DashboardPage extends StatelessWidget {
                                       width: 10,
                                       height: 10,
                                       decoration: BoxDecoration(
-                                          color: const Color(0xFF456EFF),
+                                          color: Color(0xFF456EFF),
                                           borderRadius:
                                           BorderRadius.circular(10)),
                                     ),
-                                    const Text(
+                                    Text(
                                       "5",
                                       style: TextStyle(
                                           fontSize: 15,
@@ -373,7 +376,7 @@ class DashboardPage extends StatelessWidget {
                                     )
                                   ],
                                 ),
-                                const Text(
+                                Text(
                                   "Quiz Completed",
                                   style: TextStyle(
                                       color: Color(0xFF666666),
@@ -391,11 +394,11 @@ class DashboardPage extends StatelessWidget {
                                       width: 10,
                                       height: 10,
                                       decoration: BoxDecoration(
-                                          color: const Color(0xFF9A92FF),
+                                          color: Color(0xFF9A92FF),
                                           borderRadius:
                                           BorderRadius.circular(10)),
                                     ),
-                                    const Text(
+                                    Text(
                                       "10",
                                       style: TextStyle(
                                           fontSize: 15,
@@ -403,7 +406,7 @@ class DashboardPage extends StatelessWidget {
                                     )
                                   ],
                                 ),
-                                const Text(
+                                Text(
                                   "Health Modules",
                                   style: TextStyle(
                                       color: Color(0xFF666666),
@@ -421,11 +424,11 @@ class DashboardPage extends StatelessWidget {
                                       width: 10,
                                       height: 10,
                                       decoration: BoxDecoration(
-                                          color: const Color(0xFF5F57B5),
+                                          color: Color(0xFF5F57B5),
                                           borderRadius:
                                           BorderRadius.circular(10)),
                                     ),
-                                    const Text(
+                                    Text(
                                       "7",
                                       style: TextStyle(
                                           fontSize: 15,
@@ -433,7 +436,7 @@ class DashboardPage extends StatelessWidget {
                                     )
                                   ],
                                 ),
-                                const Text(
+                                Text(
                                   "Educational Modules",
                                   style: TextStyle(
                                       color: Color(0xFF666666),
@@ -447,7 +450,7 @@ class DashboardPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 20,
                   ),
                   Row(
@@ -455,42 +458,42 @@ class DashboardPage extends StatelessWidget {
                       Container(
                           width: 10,
                           height: 10,
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             color: Color(0xFF456EFF),
                           )),
-                      const Text(
+                      Text(
                         "  Quiz Completed",
                         style: TextStyle(
                             color: Color(0xFF666666),
                             fontSize: 8,
                             fontWeight: FontWeight.w600),
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 20,
                       ),
                       Container(
                           width: 10,
                           height: 10,
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             color: Color(0xFF9A92FF),
                           )),
-                      const Text(
+                      Text(
                         "  Health Modules",
                         style: TextStyle(
                             color: Color(0xFF666666),
                             fontSize: 8,
                             fontWeight: FontWeight.w600),
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 20,
                       ),
                       Container(
                           width: 10,
                           height: 10,
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             color: Color(0xFF5F57B5),
                           )),
-                      const Text(
+                      Text(
                         "  Educational Modules",
                         style: TextStyle(
                             color: Color(0xFF666666),
@@ -503,22 +506,22 @@ class DashboardPage extends StatelessWidget {
               ),
             ),
             Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
                       topRight: Radius.circular(30))),
               width: w,
-              margin: const EdgeInsets.all(20),
+              margin: EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    padding: const EdgeInsets.all(20),
+                    padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                        color: const Color(0xFF505050),
+                        color: Color(0xFF505050),
                         borderRadius: BorderRadius.circular(30)),
-                    child: const Row(
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
@@ -540,9 +543,9 @@ class DashboardPage extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      SizedBox(width: 400,
+                      Container(width: 400,
                           child: MonthCalendar(currentDate: DateTime.now())),
-                      const SizedBox(
+                      SizedBox(
                         height: 20,
                       ),
                       Divider(
@@ -553,22 +556,22 @@ class DashboardPage extends StatelessWidget {
                   ),
                   Container(
                     height: h * 0.15,
-                    margin: const EdgeInsets.all(20),
-                    padding: const EdgeInsets.all(7),
+                    margin: EdgeInsets.all(20),
+                    padding: EdgeInsets.all(7),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       boxShadow: [
-                        const BoxShadow(color: Colors.white),
+                        BoxShadow(color: Colors.white),
                         BoxShadow(
                             color: Colors.grey.withOpacity(0.2),
                             blurRadius: 4,
                             spreadRadius: 0.5,
-                            offset: const Offset(0, 3)),
+                            offset: Offset(0, 3)),
                       ],
                     ),
                     child: Column(
                       children: [
-                        const Row(
+                        Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
@@ -587,7 +590,7 @@ class DashboardPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const Row(
+                        Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
@@ -606,13 +609,13 @@ class DashboardPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 15,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Row(
+                            Row(
                               children: [
                                 CircleAvatar(
                                   foregroundImage: AssetImage(
@@ -632,12 +635,12 @@ class DashboardPage extends StatelessWidget {
                               ],
                             ),
                             Container(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   left: 10, right: 10, top: 5, bottom: 5),
                               decoration: BoxDecoration(
-                                  color: const Color(0xFF2ED47A),
+                                  color: Color(0xFF2ED47A),
                                   borderRadius: BorderRadius.circular(5)),
-                              child: const Text(
+                              child: Text(
                                 "Completed",
                                 style: TextStyle(
                                     color: Colors.black,
@@ -652,22 +655,22 @@ class DashboardPage extends StatelessWidget {
                   ),
                   Container(
                     height: h * 0.15,
-                    margin: const EdgeInsets.all(20),
-                    padding: const EdgeInsets.all(7),
+                    margin: EdgeInsets.all(20),
+                    padding: EdgeInsets.all(7),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       boxShadow: [
-                        const BoxShadow(color: Colors.white),
+                        BoxShadow(color: Colors.white),
                         BoxShadow(
                             color: Colors.grey.withOpacity(0.2),
                             blurRadius: 4,
                             spreadRadius: 0.5,
-                            offset: const Offset(0, 3)),
+                            offset: Offset(0, 3)),
                       ],
                     ),
                     child: Column(
                       children: [
-                        const Row(
+                        Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
@@ -686,7 +689,7 @@ class DashboardPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const Row(
+                        Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
@@ -705,13 +708,13 @@ class DashboardPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 15,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Row(
+                            Row(
                               children: [
                                 CircleAvatar(
                                   foregroundImage:
@@ -731,12 +734,12 @@ class DashboardPage extends StatelessWidget {
                               ],
                             ),
                             Container(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   left: 10, right: 10, top: 5, bottom: 5),
                               decoration: BoxDecoration(
-                                  color: const Color(0xFFF7685B),
+                                  color: Color(0xFFF7685B),
                                   borderRadius: BorderRadius.circular(5)),
-                              child: const Text(
+                              child: Text(
                                 "Ended",
                                 style: TextStyle(
                                     color: Colors.black,
@@ -752,7 +755,7 @@ class DashboardPage extends StatelessWidget {
                   Center(
                       child: TextButton(
                           onPressed: () {},
-                          child: const Text(
+                          child: Text(
                             "Show more",
                             style: TextStyle(
                                 color: Color(0xFF109CF1),

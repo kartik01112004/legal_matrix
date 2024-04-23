@@ -6,8 +6,6 @@ import 'package:legal_matrix/prisoner/directory.dart';
 import 'package:legal_matrix/prisoner/rehabilitation.dart';
 
 class Prisoner extends StatefulWidget {
-  const Prisoner({super.key});
-
   @override
   _PrisonerState createState() => _PrisonerState();
 }
@@ -18,10 +16,6 @@ class _PrisonerState extends State<Prisoner> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.purple,
-        title: const Text("Prisoner"),
-      ),
       body: _getBody(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
@@ -66,9 +60,9 @@ class _PrisonerState extends State<Prisoner> {
       case 2:
         return const DashboardPage();
       case 3:
-        return const LegalDirectory();
+        return const Legal_Directory();
       case 4:
-        return const Artiles_page();
+        return Artiles_page();
       default:
         return Container(); // Return an empty container for unknown index
     }

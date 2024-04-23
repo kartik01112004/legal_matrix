@@ -35,7 +35,7 @@ Before running the application, ensure you have the following requirements insta
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/jaikush12/legal-matrix.git
+   git clone https://github.com/Developer-Student-Clubs-MMDU/legal_matrix
 
    ```
 
